@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class='clearfix'>
+    <div class="left-nav">
+      <ul>
+        <li><%= link_to "Home", jobs_path %></li>
+      </ul>
+    </div>
+    <div class="right-nav">
+      <ul>
+        <li><%= link_to "Add Job", new_job_path %></li>
+      </ul>
+    </div>
+  </header>
 
-<%= yield %>
+  <div class='content'>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
